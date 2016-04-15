@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>St Botolph's Burton Hastings Flower Festival 2016</title>
+
+<script>
+  if ('querySelector' in document && 'addEventListener' in window) {
+    document.documentElement.className += ' js';
+  }
+</script>
+
+<style>/* 450px+ */
+
+  body {
+    padding: .05rem;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+    background: rgba(254, 183, 184, 0.30);
+  }
+  @media (min-width: 450px) {
+    body {
+      padding: 2rem;
+    }
+  }
+  header {
+    padding: .5rem 2rem;
+    background: #7EA71C;
+    color: #fff;
+  }
+
+  h1 {
+    font-weight: bolder;
+    font-size: 3.5rem;
+  }
+  h1 small {
+    display: block;
+    font-size: .55em;
+  }
+
+  main {
+    box-sizing: border-box;
+    margin: .5rem -.5rem;
+  }
+  .picture,
+  .smaller {
+    padding: .5rem .5rem;
+    box-sizing: border-box;
+    float: left;
+  }
+  .bigger {
+    animation-duration: 1s;
+    animation-name: slide;
+    animation-timing-function: ease-in-out;
+  }
+  .smaller {
+    animation-duration: 1s;
+    animation-name: slide;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+  }
+
+  @media (min-width: 400px) {
+    .picture,
+    .smaller {
+      width: 50%; /* to 820px */
+    }
+    .bigger {
+      width: 100%;
+    }
+
+    @keyframes slide {
+      from {
+        width: 50%
+      }
+      to {
+        width: 100%;
+      }
+    }
+  }
+  @media (min-width: 820px) {
+    .picture,
+    .smaller {
+      width: 33.33333%; /* to 820px */
+    }
+    .bigger {
+      width: 66.66666%;
+    }
+
+    @keyframes slide {
+      from {
+        width: 33.33333%
+      }
+      to {
+        width: 66.66666%;
+      }
+    }
+  }
+  @media (min-width: 1120px) {
+    .picture,
+    .smaller {
+      width: 25%; /* to 820px */
+    }
+    .bigger {
+      width: 75%;
+    }
+
+    @keyframes slide {
+      from {
+        width: 25%
+      }
+      to {
+        width: 75%;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  aside {
+    background: #A7307B;
+    color: #fff;
+    padding: .5rem 2rem 1rem;
+    margin-top: 1rem;
+  }
+  aside :first-child {
+    font-size: 1.5rem;
+  }
+
+  aside button {
+    padding: 1rem 2rem;
+    width: 100%;
+    background: #ffbce7;
+    color: #8B1760;
+    border: none;
+    font-size: 2rem;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  }
+  .right {
+    text-align: right;
+  }
+
+
+  /* */
+
+</style>
+  <style>
+
+    .color-primary-0 {
+      color: #BE4E94
+    }
+
+    /* Main Primary color */
+    .color-primary-1 {
+      color: #E8A7D0
+    }
+
+    .color-primary-2 {
+      color: #D575B1
+    }
+
+    .color-primary-3 {
+      color: #A7307B
+    }
+
+    .color-primary-4 {
+      color: #8B1760
+    }
+
+    .color-secondary-1-0 {
+      color: #F26367
+    }
+
+    /* Main Secondary color (1) */
+    .color-secondary-1-1 {
+      color: #FEB7B8
+    }
+
+    .color-secondary-1-2 {
+      color: #FD8C8F
+    }
+
+    .color-secondary-1-3 {
+      color: #D53D41
+    }
+
+    .color-secondary-1-4 {
+      color: #B01E22
+    }
+
+    .color-secondary-2-0 {
+      color: #57C551
+    }
+
+    /* Main Secondary color (2) */
+    .color-secondary-2-1 {
+      color: #ACEBA9
+    }
+
+    .color-secondary-2-2 {
+      color: #7DDA79
+    }
+
+    .color-secondary-2-3 {
+      color: #38AE32
+    }
+
+    .color-secondary-2-4 {
+      color: #1E9018
+    }
+
+    .color-complement-0 {
+      color: #BDE55E
+    }
+
+    /* Main Complement color */
+    .color-complement-1 {
+      color: #E4F9B3
+    }
+
+    .color-complement-2 {
+      color: #D3F386
+    }
+
+    .color-complement-3 {
+      color: #9FCA3A
+    }
+
+    .color-complement-4 {
+      color: #7EA71C
+    }
+
+    /* As RGBa codes */
+
+    .rgba-primary-0 {
+      color: rgba(190, 78, 148, 1)
+    }
+
+    /* Main Primary color */
+    .rgba-primary-1 {
+      color: rgba(232, 167, 208, 1)
+    }
+
+    .rgba-primary-2 {
+      color: rgba(213, 117, 177, 1)
+    }
+
+    .rgba-primary-3 {
+      color: rgba(167, 48, 123, 1)
+    }
+
+    .rgba-primary-4 {
+      color: rgba(139, 23, 96, 1)
+    }
+
+    .rgba-secondary-1-0 {
+      color: rgba(242, 99, 103, 1)
+    }
+
+    /* Main Secondary color (1) */
+    .rgba-secondary-1-1 {
+      color: rgba(254, 183, 184, 1)
+    }
+
+    .rgba-secondary-1-2 {
+      color: rgba(253, 140, 143, 1)
+    }
+
+    .rgba-secondary-1-3 {
+      color: rgba(213, 61, 65, 1)
+    }
+
+    .rgba-secondary-1-4 {
+      color: rgba(176, 30, 34, 1)
+    }
+
+    .rgba-secondary-2-0 {
+      color: rgba(87, 197, 81, 1)
+    }
+
+    /* Main Secondary color (2) */
+    .rgba-secondary-2-1 {
+      color: rgba(172, 235, 169, 1)
+    }
+
+    .rgba-secondary-2-2 {
+      color: rgba(125, 218, 121, 1)
+    }
+
+    .rgba-secondary-2-3 {
+      color: rgba(56, 174, 50, 1)
+    }
+
+    .rgba-secondary-2-4 {
+      color: rgba(30, 144, 24, 1)
+    }
+
+    .rgba-complement-0 {
+      color: rgba(189, 229, 94, 1)
+    }
+
+    /* Main Complement color */
+    .rgba-complement-1 {
+      color: rgba(228, 249, 179, 1)
+    }
+
+    .rgba-complement-2 {
+      color: rgba(211, 243, 134, 1)
+    }
+
+    .rgba-complement-3 {
+      color: rgba(159, 202, 58, 1)
+    }
+
+    .rgba-complement-4 {
+      color: rgba(126, 167, 28, 1)
+    }
+  </style>
+</head>
+  <body>
+  <header>
+    <h1>Flower Festival 2016 <small>St. Botolph's Church, Burton Hastings</small></h1>
+    <p>Brief description here</p>
+    <p>and here?</p>
+  </header>
+
+  <aside>
+    <p>Donate to help fund a toilet for the church..</p>
+    <p>Very short text here</p>
+    <p class="right">
+      <button>Donate</button>
+    </p>
+  </aside>
+
+  <main>
+    <div class="picture">
+      <img src="images/photo_2016-04-15_14-45-59.jpg" alt="">
+    </div>
+    <div class="picture">
+      <img src="images/photo_2016-04-15_14-46-15.jpg" alt="">
+    </div>
+  </main>
+  </body>
+<script>
+var hasClass = function (elem, className) {
+  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+};
+
+var addClass = function (elem, className) {
+  if (!hasClass(elem, className)) {
+    elem.className += ' ' + className;
+  }
+};
+
+var removeClass = function (elem, className) {
+  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+  if (hasClass(elem, className)) {
+    while (newClass.indexOf(' ' + className + ' ') >= 0) {
+      newClass = newClass.replace(' ' + className + ' ', ' ');
+    }
+    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+  }
+};
+
+if ('querySelector' in document && 'addEventListener' in window) {
+
+  // click handlers
+  var sandwichTurkey = document.querySelector('#turkey');
+  var pictures = document.querySelectorAll('.picture');
+
+
+  for (var i = 0, len = pictures.length; i < len; i++) {
+    pictures[i].addEventListener('click', function (e) {
+        console.log(e);
+      var picture;
+      if (e.target.nodeName === "IMG") {
+        picture = e.target.parentNode;
+      }
+      else if (hasClass(e.target, "picture")){
+        picture = e.target
+      }
+
+      if (hasClass(picture, 'bigger')) {
+        removeClass(picture, 'bigger');
+        picture.offsetWidth = picture.offsetWidth;
+        addClass(picture, 'smaller');
+        picture.offsetWidth = picture.offsetWidth;
+
+      }
+
+      else {
+        if (hasClass(picture, 'smaller')) {
+          removeClass(picture, 'smaller');
+          picture.offsetWidth = picture.offsetWidth;
+
+        }
+        addClass(picture, 'bigger');
+        picture.offsetWidth = picture.offsetWidth;
+      }
+    });
+  }
+}
+</script>
+</html>
