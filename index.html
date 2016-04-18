@@ -10,8 +10,7 @@
   }
 </script>
 
-<style>/* 450px+ */
-
+<style>
   body {
     padding: .05rem;
     font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
@@ -101,7 +100,7 @@
       width: 25%; /* to 820px */
     }
     .bigger {
-      width: 75%;
+      width: 50%;
     }
 
     @keyframes slide {
@@ -109,7 +108,7 @@
         width: 25%
       }
       to {
-        width: 75%;
+        width: 50%;
       }
     }
   }
@@ -124,25 +123,32 @@
     padding: .5rem 2rem 1rem;
     margin-top: 1rem;
   }
-  aside :first-child {
+  aside p:first-child {
     font-size: 1.5rem;
   }
 
   aside button {
     padding: 1rem 2rem;
     width: 100%;
-    background: #ffbce7;
+    background: #fff;
     color: #8B1760;
     border: none;
     font-size: 2rem;
     font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+    cursor: hand;
   }
-  .right {
-    text-align: right;
+  aside button:hover,
+  aside button:focus {
+    border-bottom: solid .4rem #9FCA3A;
+    margin-bottom: -.4rem;
+  }
+  aside button:active {
+    border: none;
+    border-top: solid .4rem #9FCA3A;
+    margin-bottom: 0;
+    margin-top: -.4rem;
   }
 
-
-  /* */
 
 </style>
   <style>
@@ -328,7 +334,7 @@
   <aside>
     <p>Donate to help fund a toilet for the church..</p>
     <p>Very short text here</p>
-    <p class="right">
+    <p>
       <button>Donate</button>
     </p>
   </aside>
@@ -383,7 +389,7 @@ if ('querySelector' in document && 'addEventListener' in window) {
 
       if (hasClass(picture, 'bigger')) {
         removeClass(picture, 'bigger');
-        picture.offsetWidth = picture.offsetWidth;
+        picture.offsetWidth = picture.offsetWidth; // Fixes for css animation.
         addClass(picture, 'smaller');
         picture.offsetWidth = picture.offsetWidth;
 
