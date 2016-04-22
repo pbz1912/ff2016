@@ -1,0 +1,12 @@
+  <div class="picture">
+    <img src="thumbs/photo_2016-04-15_14-45-59.jpg" data-src="images/photo_2016-04-15_14-45-59.jpg" alt="">
+  </div>
+  <div class="picture">
+    <img src="thumbs/photo_2016-04-15_14-46-15.jpg" data-src="images/photo_2016-04-15_14-46-15.jpg" alt="">
+  </div>
+  <div class="picture">
+    <img src="thumbs/photo_2016-04-18_11-09-22.jpg" data-src="images/photo_2016-04-18_11-09-22.jpg" alt="">
+  </div>
+  <div class="picture">
+    <img src="thumbs/photo_2016-04-22_14-11-08.jpg" data-src="images/photo_2016-04-22_14-11-08.jpg" alt="">
+  </div>

@@ -45,6 +45,7 @@
     padding: .5rem .5rem;
     box-sizing: border-box;
     float: left;
+    width: 100%;
   }
   .bigger {
     animation-duration: 1s;
@@ -341,74 +342,78 @@
 
   <main>
     <div class="picture">
-      <img src="images/photo_2016-04-15_14-45-59.jpg" alt="">
+      <img src="thumbs/photo_2016-04-15_14-45-59.jpg" data-src="images/photo_2016-04-15_14-45-59.jpg" alt="">
     </div>
     <div class="picture">
-      <img src="images/photo_2016-04-15_14-46-15.jpg" alt="">
+      <img src="thumbs/photo_2016-04-15_14-46-15.jpg" data-src="images/photo_2016-04-15_14-46-15.jpg" alt="">
     </div>
     <div class="picture">
-      <img src="images/photo_2016-04-18_11-09-22.jpg" alt="">
+      <img src="thumbs/photo_2016-04-18_11-09-22.jpg" data-src="images/photo_2016-04-18_11-09-22.jpg" alt="">
+    </div>
+    <div class="picture">
+      <img src="thumbs/photo_2016-04-22_14-11-08.jpg" data-src="images/photo_2016-04-22_14-11-08.jpg" alt="">
     </div>
   </main>
-</body>
-<script>
-var hasClass = function (elem, className) {
-  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-};
 
-var addClass = function (elem, className) {
-  if (!hasClass(elem, className)) {
-    elem.className += ' ' + className;
-  }
-};
+  <script>
+    var hasClass = function (elem, className) {
+      return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+    };
 
-var removeClass = function (elem, className) {
-  var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-  if (hasClass(elem, className)) {
-    while (newClass.indexOf(' ' + className + ' ') >= 0) {
-      newClass = newClass.replace(' ' + className + ' ', ' ');
-    }
-    elem.className = newClass.replace(/^\s+|\s+$/g, '');
-  }
-};
-
-if ('querySelector' in document && 'addEventListener' in window) {
-
-  // click handlers
-  var sandwichTurkey = document.querySelector('#turkey');
-  var pictures = document.querySelectorAll('.picture');
-
-
-  for (var i = 0, len = pictures.length; i < len; i++) {
-    pictures[i].addEventListener('click', function (e) {
-        console.log(e);
-      var picture;
-      if (e.target.nodeName === "IMG") {
-        picture = e.target.parentNode;
+    var addClass = function (elem, className) {
+      if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
       }
-      else if (hasClass(e.target, "picture")){
-        picture = e.target
-      }
+    };
 
-      if (hasClass(picture, 'bigger')) {
-        removeClass(picture, 'bigger');
-        picture.offsetWidth = picture.offsetWidth; // Fixes for css animation.
-        addClass(picture, 'smaller');
-        picture.offsetWidth = picture.offsetWidth;
-
-      }
-
-      else {
-        if (hasClass(picture, 'smaller')) {
-          removeClass(picture, 'smaller');
-          picture.offsetWidth = picture.offsetWidth;
-
+    var removeClass = function (elem, className) {
+      var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+      if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0) {
+          newClass = newClass.replace(' ' + className + ' ', ' ');
         }
-        addClass(picture, 'bigger');
-        picture.offsetWidth = picture.offsetWidth;
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
       }
-    });
-  }
-}
-</script>
+    };
+
+    if ('querySelector' in document && 'addEventListener' in window) {
+
+      // click handlers
+      var sandwichTurkey = document.querySelector('#turkey');
+      var pictures = document.querySelectorAll('.picture');
+
+
+      for (var i = 0, len = pictures.length; i < len; i++) {
+        pictures[i].addEventListener('click', function (e) {
+          console.log(e);
+          var picture;
+          if (e.target.nodeName === "IMG") {
+            picture = e.target.parentNode;
+          }
+          else if (hasClass(e.target, "picture")) {
+            picture = e.target
+          }
+
+          if (hasClass(picture, 'bigger')) {
+            removeClass(picture, 'bigger');
+            picture.offsetWidth = picture.offsetWidth; // Fixes for css animation.
+            addClass(picture, 'smaller');
+            picture.offsetWidth = picture.offsetWidth;
+
+          }
+
+          else {
+            if (hasClass(picture, 'smaller')) {
+              removeClass(picture, 'smaller');
+              picture.offsetWidth = picture.offsetWidth;
+
+            }
+            addClass(picture, 'bigger');
+            picture.offsetWidth = picture.offsetWidth;
+          }
+        });
+      }
+    }
+  </script>
+</body>
 </html>
